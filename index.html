@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R01 Aging Grant Submit-O-Meter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>R01 Aging Grant Submit-O-Meter</h1>
-        <div class="progress-bar">
-            <div class="progress-bar-fill"></div>
+        <div class="meter">
+            <div class="needle" id="needle"></div>
         </div>
-        <p class="progress-percentage">0%</p>
+        <p id="percentage">% chance of submission</p>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
