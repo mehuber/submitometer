@@ -1,37 +1,39 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    margin: 20px auto;
-    max-width: 800px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
 }
 
-h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.meter {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    position: relative;
 }
 
-.progress-bar {
-    height: 20px;
-    width: 300px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    overflow: hidden;
+.needle {
+    width: 2px;
+    height: 70px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
 }
 
-.progress-bar-fill {
-    height: 100%;
-    background-color: #007bff;
-    transition: width 0.5s ease-in-out;
-}
-
-.progress-percentage {
-    font-size: 18px;
-    margin-top: 10px;
+#percentage {
+    font-size: 20px;
+    margin-top: 20px;
 }
