@@ -1,5 +1,5 @@
 // Replace this with your actual logic to calculate the submission percentage
-var submissionPercentage = 75; // Example value
+var submissionPercentage = 10; // Example value
 
 // Update the progress bar and percentage display
 var progressBarFill = document.querySelector('.progress-bar-fill');
