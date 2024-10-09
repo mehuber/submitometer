@@ -36,8 +36,10 @@ body {
 #percentage {
     font-size: 20px;
     margin-top: 20px;
+    text-align: center;
 }
 #title {
     font-size: 80px;
     margin-top: 20px;
+    text-align: center;
 }
