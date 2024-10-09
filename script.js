@@ -1,18 +1,8 @@
-const dial = document.querySelector('.dial');
-const needle = document.querySelector('.needle');
-const percentageText = document.querySelector('.percentage');
+// Replace this with your actual logic to calculate the submission percentage
+var submissionPercentage = 75; // Example value
 
-// Example using a slider:
-const slider = document.createElement('input');
-slider.type = 'range';
-slider.min = 0;
-slider.max = 100;
-slider.value = 50;
-dial.appendChild(slider);
-
-slider.addEventListener('input', () => {
-  const percentage = slider.value;
-  const rotation = (percentage / 100) * 360 - 90; // Adjust rotation as needed
-  needle.style.transform = `rotate(${rotation}deg)`;
-  percentageText.textContent = `${percentage}% Chance of submission`;
-});
+// Update the progress bar and percentage display
+var progressBarFill = document.querySelector('.progress-bar-fill');
+var progressPercentage = document.querySelector('.progress-percentage');
+progressBarFill.style.width = submissionPercentage + '%';
+progressPercentage.textContent = submissionPercentage + '%';
