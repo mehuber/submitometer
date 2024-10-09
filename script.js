@@ -2,7 +2,7 @@ const needle = document.getElementById('needle');
 const percentageText = document.getElementById('percentage');
 
 // Replace this with your logic to determine the percentage
-const percentage = 75; // Example value
+const percentage = 20; // Example value
 
 // Calculate the rotation angle based on the percentage
 const rotation = (percentage / 100) * 360;
