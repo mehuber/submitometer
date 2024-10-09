@@ -11,10 +11,30 @@
         <h1>Grant Submit-o-meter</h1>
         <div class="dial">
             <div class="dial-background"></div>
-            <div class="dial-filler" style="transform: rotate(120deg);"></div>
+            <div class="dial-filler" style="transform: rotate(0deg);"></div>
+            <div class="needle"></div>
             <div class="indicator">60%</div>
         </div>
         <p>Estimate your chance of grant submission!</p>
     </div>
+
+    <script>
+        // Value for the dial (0-100)
+        const chanceValue = 60;
+        
+        // Calculate the rotation for the needle (180 degrees represents 100)
+        const rotation = (chanceValue / 100) * 180;
+
+        // Update the needle and dial-filler rotation on page load
+        window.onload = () => {
+            const needle = document.querySelector('.needle');
+            const dialFiller = document.querySelector('.dial-filler');
+            const indicator = document.querySelector('.indicator');
+
+            needle.style.transform = `rotate(${rotation + 180}deg)`;
+            dialFiller.style.transform = `rotate(${rotation}deg)`;
+            indicator.textContent = `${chanceValue}%`;
+        };
+    </script>
 </body>
 </html>
