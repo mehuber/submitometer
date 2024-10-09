@@ -1,48 +1,57 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f0f8ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    text-align: center;
+    color: #333;
 }
 
 .container {
-    text-align: center;
+    padding: 50px;
 }
 
 .dial {
+    position: relative;
     width: 300px;
     height: 150px;
-    border-radius: 150px 150px 0 0;
-    border: 10px solid #333;
-    position: relative;
-    background: conic-gradient(
-        #ff5722 0deg,
-        #ff5722 var(--confidence-degree),
-        #4caf50 var(--confidence-degree),
-        #4caf50 360deg
-    );
+    margin: 0 auto;
     overflow: hidden;
 }
 
-.needle {
-    width: 8px;
-    height: 120px;
-    background: #333;
+.dial-background {
     position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #ff7e50 50%, #20b2aa 50%);
     bottom: 0;
-    left: 50%;
-    transform-origin: bottom;
-    transform: rotate(0deg);
+    transform: rotate(180deg);
 }
 
-input[type="range"] {
-    width: 100%;
-    margin-top: 20px;
+.dial-filler {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #32cd32;
+    bottom: 0;
+    transform-origin: bottom;
+    transition: transform 0.5s ease-in-out;
+}
+
+.indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
 }
 
 h1 {
-    color: #ff5722;
+    font-size: 2.5rem;
+    color: #ff6347;
+}
+
+p {
+    font-size: 1.2rem;
 }
