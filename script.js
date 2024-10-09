@@ -1,8 +1,14 @@
-// Replace this with your actual logic to calculate the submission percentage
-var submissionPercentage = 10; // Example value
+const needle = document.getElementById('needle');
+const percentageText = document.getElementById('percentage');
 
-// Update the progress bar and percentage display
-var progressBarFill = document.querySelector('.progress-bar-fill');
-var progressPercentage = document.querySelector('.progress-percentage');
-progressBarFill.style.width = submissionPercentage + '%';
-progressPercentage.textContent = submissionPercentage + '%';
+// Replace this with your logic to determine the percentage
+const percentage = 75; // Example value
+
+// Calculate the rotation angle based on the percentage
+const rotation = (percentage / 100) * 360;
+
+// Apply the rotation to the needle
+needle.style.transform = `rotate(${rotation}deg)`;
+
+// Update the text
+percentageText.textContent = `${percentage}% chance of submission`;
