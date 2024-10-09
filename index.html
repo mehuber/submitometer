@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidence Dial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Confidence in Proposal Submission</h1>
+        <div class="dial" id="dial">
+            <div class="needle" id="needle"></div>
+        </div>
+        <input type="range" min="0" max="100" value="50" id="confidenceRange" />
+        <p>Confidence Level: <span id="confidenceValue">50</span>%</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
