@@ -9,12 +9,12 @@
 <body>
     <div class="container">
         <h1>Grant Submit-o-meter</h1>
-        <div class="dial" id="dial">
-            <div class="needle" id="needle"></div>
+        <div class="dial">
+            <div class="dial-background"></div>
+            <div class="dial-filler" style="transform: rotate(120deg);"></div>
+            <div class="indicator">60%</div>
         </div>
-        <input type="range" min="0" max="100" value="50" id="confidenceRange" />
-        <p>Chance of Submission: <span id="confidenceValue">50</span>%</p>
+        <p>Estimate your chance of grant submission!</p>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
