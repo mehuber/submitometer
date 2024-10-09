@@ -7,7 +7,7 @@ confidenceRange.addEventListener('input', (event) => {
     confidenceValue.textContent = value;
 
     // Calculate the angle for the needle
-    const degree = (value / 100) * 360;
+    const degree = (value / 100) * 180; // Half circle (180 degrees)
     needle.style.transform = `rotate(${degree}deg)`;
 
     // Update the background of the dial
